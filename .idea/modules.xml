@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../my-job-scrapper/.idea/my-job-scrapper.iml" filepath="$PROJECT_DIR$/../my-job-scrapper/.idea/my-job-scrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/python-job-scrapper.iml" filepath="$PROJECT_DIR$/.idea/python-job-scrapper.iml" />
+    </modules>
+  </component>
+</project>

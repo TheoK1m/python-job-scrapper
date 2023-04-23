@@ -1,4 +1,3 @@
-from requests import get
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
@@ -24,9 +23,6 @@ def get_page_count(keyword):
         return 5
     else:
         return count
-    
-
-
 def extract_indeed_jobs(keyword):
     pages = get_page_count(keyword)
     print("Found", pages, "pages")
@@ -54,8 +50,11 @@ def extract_indeed_jobs(keyword):
                     "link": f"https://kr.indeed.com{link}",
                     "company": company.string,
                     "location": location.string,
-                    "position": title,   
+                    "position": title,
                 }
+                for each in job_data:
+                    if job_data[each] != None:
+                        job_data[each] = job_data[each].replace(",", " ")
                 results.append(job_data)
                 
     return results
